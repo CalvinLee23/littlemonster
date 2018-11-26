@@ -8,19 +8,25 @@
 	<style>
 		@media only screen and (max-width: 513px){
 			#div1{
-				width: 33.33%;
+				width: 100%;
 				float:left;
 				background-color: black;
+				height: 300px;
 			}
 			#div2{
-				width: 33.33%;
+				width: 100%;
 				float:left;
 				background-color: deepskyblue;
+				height: 300px;
 			}
 			#div3{
-				width: 33.33%;
+				width: 100%;
 				float:left;
 				background-color: coral;
+				height: 300px;
+			}
+			h1{
+				text-align: center;
 			}
 		}
 
@@ -29,16 +35,22 @@
 				width: 33.33%;
 				float:left;
 				background-color: black;
+				height: 300px;
 			}
 			#div2{
 				width: 33.33%;
 				float:left;
 				background-color: deepskyblue;
+				height: 300px;
 			}
 			#div3{
 				width: 33.33%;
 				float:left;
 				background-color: coral;
+				height: 300px;
+			}
+			h1{
+				text-align: center;
 			}
 		}
 		
@@ -47,16 +59,88 @@
 				width: 33.33%;
 				float:left;
 				background-color: black;
+				height: 300px;
 			}
 			#div2{
 				width: 33.33%;
 				float:left;
 				background-color: deepskyblue;
+				height: 300px;
 			}
 			#div3{
 				width: 33.33%;
 				float:left;
 				background-color: coral;
+				height: 300px;
+			}
+			h1{
+				text-align: center;
+			}
+			#previous{
+				width: 10%;
+				float:left;
+				border-radius: 50%;
+				height: 60px;
+				margin-top: 100px;
+			}
+			#player{
+				margin-top: 90px;
+				width: 11%;
+				float:left;
+				height: 100%;
+			}
+			#next{
+				width: 10%;
+				float:left;
+				border-radius: 50%;
+				height: 60px;
+				margin-top: 100px;
+			}
+			#previous:hover{
+				background-color: darkblue;
+				color: white;
+			}
+			#next:hover{
+				background-color: darkblue;
+				color: white;
+			}
+			.emp{
+				width: 9%;
+				height: 100%;
+				float: left;
+			}
+			#pop,#rock,#others{
+				width: 100%;
+				background-color: transparent;
+				color: aqua;
+			}
+			#pop:hover{
+				background-color: white;
+				color:black;
+			}
+			#rock:hover{
+				background-color: white;
+				color:black;
+			}
+			#others:hover{
+				background-color: white;
+				color:black;
+			}
+			.pop{
+				background-color: transparent;
+				color:black;
+			}
+			.pop:hover{
+				background-color: darkblue;
+				color:white;
+			}
+			.rock{
+				background-color: transparent;
+				color:black;
+			}
+			.rock:hover{
+				background-color: darkblue;
+				color:white;
 			}
 		}
 	</style>
@@ -64,9 +148,52 @@
 
 <body>
 	<h1>Music Player</h1>
-	<div id="div1"></div>
+	<div id="div1">
+		<button id="pop">Pop</button>
+		<button id="rock">Rock</button>
+		<button id="others">Others</button>
+	</div>
 	<div id="div2">
+		<div class="emp"></div>
+		<div class="emp"></div>
+		<div id="bt1">
+			<button id="previous">Previous</button>
+		</div>
+		<div class="emp"></div>
+		<div class="emp"></div>
+		<div id="player">
+			<button class="pop">Judas</button>
+			<button class="pop">You & I</button>
+			<button class="pop">Speechless</button>
+			<button class="pop">Applause</button>
+			<button class="pop">Artpop</button>
+			<button class="rock">Make It Wit Chu</button>
+			<button class="rock">No One Knows</button>
+			<button class="rock">Sat By the Ocean</button>
+		</div>
+		<div class="emp"></div>
+		<div class="emp"></div>
+		<div id="bt2">
+			<button id="next">Next</button>
+		</div>
+		<div class="emp"></div>
+		<div class="emp"></div>
 	</div>
 	<div id="div3"></div>
+	<div id="video"></div>
+	<script>
+		$(document).ready(function(){
+			$(".pop").hide();
+			$(".rock").hide();
+			$("#pop").click(function(){
+				$(".pop").show();
+				$(".rock").hide();
+			});
+			$("#rock").click(function(){
+				$(".rock").show();
+				$(".pop").hide();
+			});
+		});
+	</script>
 </body>
 </html>
